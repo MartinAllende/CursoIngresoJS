@@ -8,3 +8,8 @@ function mostrar()
 {
 	alert("hola bienvenido")
 }
+
+/* Comentarios: Martin Allende
+   Agrege otro alerte con "hola bienvenidos" para probar y al entrar 
+   a la pagina o recargarla tira ese mensaje 
+   Ejercicio 1 */ 
