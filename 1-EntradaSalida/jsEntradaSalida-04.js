@@ -15,4 +15,5 @@ function mostrar()
 
 
 /* Martin Allende
-   Ejercicio 4 */
+   Ejercicio 4 */ 
+   /* entregado */

@@ -13,6 +13,14 @@ function mostrar()
 
 	alert("usted se llama " + palabra + " y tiene " + numero + " años ");
 
+
+
+/* otra manera de hacerlo es
+   
+   let mesajeamostrar;
+   mensajeamostrar= "usted se llama" + palabra + "y tenes" + numero + "años";
+   alert(mensajeamostrar); */
+
 }
 
 /* "txtIdNombre" cuadro de nombre
@@ -20,3 +28,4 @@ function mostrar()
 
    /* Martin Allende 
       Ejercicio 5 */
+	  /* entregado*/ 
