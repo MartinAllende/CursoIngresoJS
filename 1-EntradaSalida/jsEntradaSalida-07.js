@@ -58,4 +58,5 @@ function dividir()
 }
 
  /* Martin Allende
-    Ejercicio 7 */
+    Ejercicio 7 
+    Entregado */
