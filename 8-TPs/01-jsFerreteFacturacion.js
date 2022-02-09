@@ -14,7 +14,7 @@ function Sumar ()
 	numero2 = document.getElementById("txtIdPrecioDos").value;
     numero3 = document.getElementById("txtIdPrecioTres").value;
     resultado = parseInt(numero1) + parseInt(numero2) + parseInt(numero3);
-    alert(resultado.toFixed(3));
+    alert(resultado.toFixed(2));
 
 }
 function Promedio () 
@@ -30,7 +30,7 @@ function Promedio ()
     numero3 = document.getElementById("txtIdPrecioTres").value;
     precioBruto = parseInt(numero1) + parseInt(numero2) + parseInt(numero3);
     resultado = parseInt(precioBruto) / 3;
-    alert(resultado.toFixed(3));
+    alert(resultado.toFixed(2));
    
 }
 function PrecioFinal () 
@@ -41,15 +41,18 @@ function PrecioFinal ()
     let precioBruto;
     let resultado;
 
-    numero1 = document.getElementById("txtIdPrecioUno").value;
+    numero1 = document.getElementById("txtIdPrecioUsno").value;
 	numero2 = document.getElementById("txtIdPrecioDos").value;
     numero3 = document.getElementById("txtIdPrecioTres").value;
     precioBruto = parseInt(numero1) + parseInt(numero2) + parseInt(numero3);
     resultado = parseInt(precioBruto) * 1.21;
-    alert(resultado.toFixed(3));
+    alert(resultado.toFixed(2));
 
 }
 
 /* "txtIdPrecioUno"
    "txtIdPrecioDos"
-   "txtIdPrecioTres" */
+   "txtIdPrecioTres" 
+    Martin Allende 
+    tp 1       
+    Entregado      */

@@ -1,6 +1,14 @@
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
+	let edad;
 
-}//FIN DE LA FUNCIÓN
+	edad = document.getElementById("txtIdEdad").value;
+
+	if (edad >= 18 || edad <= 12) {
+		
+		alert("no es adolsecente")};
+
+}
+	/* Martin Allende
+   Instrucciones If 5 
+   entregado*/
