@@ -1,6 +1,15 @@
 function mostrar()
 {
-	//Genero el número RANDOM entre 1 y 10 
-	alert("ok");	
+	const mayor = 9
+	const menor = 1
+	let numero
 
-}//FIN DE LA FUNCIÓN
+	numero = Math.round(Math.random() * (mayor - menor) + menor )
+
+	alert(numero)
+
+	/* como dar un numero aleatorio */
+}
+	/* Martin Allende
+	   if 9 
+	   entregado*/

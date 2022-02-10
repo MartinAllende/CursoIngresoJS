@@ -1,6 +1,17 @@
 function mostrar()
 {
-	//Genero el número RANDOM entre 1 y 10 
-	alert("ok");
+	const mayor = 10;
+	const menor = 1;
+	let numero;
 
-}//FIN DE LA FUNCIÓN
+	numero = Math.round(Math.random() * (mayor - menor) + menor );
+
+	if(numero > 3 && numero < 9 ){alert("APROBÓ")}
+	else if(numero < 4){alert("Vamos, la proxima se puede")}
+	else{alert("EXCELENTE")};
+	
+
+}	
+	/* Martin Allende
+	   If 10 
+	   entregado */ 

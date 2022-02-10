@@ -44,16 +44,16 @@ function Materiales ()
 {
 	let largo;
     let ancho;
-    let perimetro;
+    let area;
     let cemento;
     let cal;
     let respuesta;
 
     largo = parseFloat(document.getElementById("txtIdLargo").value);
     ancho = parseFloat(document.getElementById("txtIdAncho").value);
-    perimetro = largo * ancho;
-    cemento =  perimetro * 2;
-    cal = perimetro * 3;
+    area = largo * ancho;
+    cemento =  area * 2;
+    cal = area * 3;
     respuesta = "se necesitan " + cemento + " bolsas de cemento y " + cal + " bolsas de cal";
 
     alert(respuesta);
