@@ -1,6 +1,27 @@
 function mostrar()
 {
-	var destinoIngresado =txtIdDestino.value;
-	alert(destinoIngresado);
+	let destino;
+	
+	destino = document.getElementById("txtIdDestino").value;
 
-}//FIN DE LA FUNCIÓN
+	switch(destino){
+		case "Bariloche":
+			alert("Se encuentra en el Sur");
+			break;
+		case "Mar del plata":
+			alert("Se encuentra en el Este");
+			break;
+		case "Cataratas":
+			alert("Se encuentra en el Oeste");
+			break;
+		case "Ushuaia":
+			alert("Se encuentra en el Norte");
+			break;
+
+	}
+		
+
+
+}
+	/* Martin Allende
+		Switch 7 */

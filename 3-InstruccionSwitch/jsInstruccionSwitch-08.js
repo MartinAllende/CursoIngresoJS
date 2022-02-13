@@ -1,6 +1,21 @@
 function mostrar()
 {
-	var destinoIngresado =txtIdDestino.value;
-	alert(destinoIngresado);
+	let destino;
+	
+	destino = document.getElementById("txtIdDestino").value;
 
-}//FIN DE LA FUNCIÓN
+	switch(destino){
+		case "Bariloche":
+		case "Ushuaia":
+			alert("Hace frio");
+			break;
+		case "Mar del plata":
+		case "Cataratas":
+			alert("Hace calor");
+			break;
+	}
+			
+	
+}
+	/* Martin Allende
+		Switch 8 */
