@@ -12,4 +12,4 @@ function mostrar()
 /* Comentarios: Martin Allende
    Agrege otro alerte con "hola bienvenidos" para probar y al entrar 
    a la pagina o recargarla tira ese mensaje 
-   Ejercicio 1 */ /*entregado*/ 
+   Ejercicio 1 */ /*entregado hola*/ 
