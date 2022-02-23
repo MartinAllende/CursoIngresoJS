@@ -1,5 +1,5 @@
 function mostrar()
-{
+/*{
 	let horaDelDia; 
 	
 	horaDelDia = document.getElementById("txtIdHora").value;
@@ -43,6 +43,27 @@ function mostrar()
 	}
 
 
+}*/    
 
-}    /* Martin Allende
-		Switch 6 */
+/* Martin Allende
+		Switch 6 
+		entregado */
+
+{	
+
+	let horaDelDia; 
+	let mensaje;
+	
+	horaDelDia = document.getElementById("txtIdHora").value;
+
+		if(horaDelDia <= 11 && horaDelDia >= 7){
+			mensaje = "Es de mañana";}
+		else if (horaDelDia <= 19 && horaDelDia >= 12){
+			mensaje = "Es de tarde";}
+		else if ((horaDelDia <= 24 && horaDelDia >= 20)||(horaDelDia <= 6 && horaDelDia >= 0)){
+			mensaje = "Es de noche";}
+		else { mensaje = "la hora no existe";}
+
+		alert(mensaje);
+
+} /*entregado*/

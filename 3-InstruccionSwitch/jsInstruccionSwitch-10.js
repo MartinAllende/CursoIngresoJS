@@ -27,7 +27,8 @@ function mostrar()
 		}
 
 		/* Martin Allende 
-			Switch 10 */
+			Switch 10 
+			entregar */
 	
 		
 			

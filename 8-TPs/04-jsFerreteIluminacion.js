@@ -14,92 +14,77 @@ function CalcularPrecio ()
     let cantidadDeLamparas;
     let marca;
     let precioSinDescuento;
-    let precioFinal;
-
-    precioFinal = (document.getElementById("txtIdprecioDescuento").value);
-    precioLamparas = parseFloat(35);
-    cantidadDeLamparas = parseFloat(document.getElementById("txtIdCantidad").value);
+    
+    precioLamparas = 35;
+    cantidadDeLamparas = parseInt(document.getElementById("txtIdCantidad").value);
     marca = document.getElementById("Marca").value;
     precioSinDescuento = precioLamparas * cantidadDeLamparas;
                 
     
-    /* A */
+    switch(cantidadDeLamparas){
+        case 5: if(marca =="ArgentinaLuz" && precioSinDescuento * 0.6 >= 120){
+                    document.getElementById("txtIdprecioDescuento").value = (precioSinDescuento * 0.6) * 1.1;
+                    alert("usted pago " + (precioSinDescuento * 0.6)* 0.1 + " de IIBB");}
 
-    if(cantidadDeLamparas >= 6){switch(precioSinDescuento * 0.5 >= 120){
-        case true:(document.getElementById("txtIdprecioDescuento").value) = (precioSinDescuento * 0.5)* 1.1
-        alert("usted pago " + (precioSinDescuento * 0.5)* 0.1 + " de IIBB");
-        break;
-        case false:(document.getElementById("txtIdprecioDescuento").value) = precioSinDescuento * 0.5
-        break;}
-                                }
- 
-    /* B */
+                else if(marca != "ArgentinaLuz" && precioSinDescuento * 0.7 >= 120){
+                    (document.getElementById("txtIdprecioDescuento").value) = (precioSinDescuento * 0.7)* 1.1;
+                    alert("usted pago " + (precioSinDescuento * 0.7)* 0.1 + " de IIBB");}
 
-    if(cantidadDeLamparas == 5 && marca =="ArgentinaLuz"){{switch(precioSinDescuento * 0.6 >= 120){
-        case true:(document.getElementById("txtIdprecioDescuento").value) = (precioSinDescuento * 0.6)* 1.1
-        alert("usted pago " + (precioSinDescuento * 0.6)* 0.1 + " de IIBB");
-        break;
-        case false:(document.getElementById("txtIdprecioDescuento").value) = precioSinDescuento * 0.6
-        break;}
-                                                          }}
+                else if(marca =="ArgentinaLuz" && precioSinDescuento * 0.6 < 120){
+                    (document.getElementById("txtIdprecioDescuento").value) = precioSinDescuento * 0.6;}
 
-    else if(cantidadDeLamparas == 5 && marca !="ArgentinaLuz"){{switch(precioSinDescuento * 0.7 >= 120){
-        case true:(document.getElementById("txtIdprecioDescuento").value) = (precioSinDescuento * 0.7)* 1.1
-        alert("usted pago " + (precioSinDescuento * 0.7)* 0.1 + " de IIBB");
-        break;
-        case false:(document.getElementById("txtIdprecioDescuento").value) = precioSinDescuento * 0.7
-        break;}
-                                                               }};
-        
-    /* C */ 
+                else if(marca != "ArgentinaLuz" && precioSinDescuento * 0.7 < 120){
+                    (document.getElementById("txtIdprecioDescuento").value) = (precioSinDescuento * 0.7);}
 
-    if(cantidadDeLamparas == 4 && (marca == "ArgentinaLuz" || marca == "FelipeLamparas")){{switch(precioSinDescuento * 0.75 >= 120){
-        case true:(document.getElementById("txtIdprecioDescuento").value) = (precioSinDescuento * 0.75)* 1.1
-        alert("usted pago " + (precioSinDescuento * 0.75)* 0.1 + " de IIBB");
-        break;
-        case false:(document.getElementById("txtIdprecioDescuento").value) = precioSinDescuento * 0.75
-        break;}
-                                                          }}
+                break;
+
+        case 4: if((marca =="ArgentinaLuz" || marca =="FelipeLamparas") && precioSinDescuento * 0.75 >= 120){
+                    document.getElementById("txtIdprecioDescuento").value = (precioSinDescuento * 0.75) * 1.1 ;
+                    alert("usted pago " + (precioSinDescuento * 0.75)* 0.1 + " de IIBB");}
+
+                else if(marca != "ArgentinaLuz" && marca !="FelipeLamparas" && precioSinDescuento * 0.8 >= 120){
+                    document.getElementById("txtIdprecioDescuento").value = (precioSinDescuento * 0.8)* 1.1;
+                    alert("usted pago " + (precioSinDescuento * 0.8)* 0.1 + " de IIBB");}
+
+                else if((marca =="ArgentinaLuz" || marca =="FelipeLamparas") && precioSinDescuento * 0.75 <= 120){
+                    document.getElementById("txtIdprecioDescuento").value = precioSinDescuento * 0.75;}
+
+                else if(marca != "ArgentinaLuz" && marca !="FelipeLamparas" && precioSinDescuento * 0.8 <= 120){
+                    document.getElementById("txtIdprecioDescuento").value = (precioSinDescuento * 0.8);}
+
+                break;
+
+        case 3: if(marca =="ArgentinaLuz"){
+                    document.getElementById("txtIdprecioDescuento").value = precioSinDescuento * 0.85;}
+
+                else if(marca =="FelipeLamparas"){
+                    document.getElementById("txtIdprecioDescuento").value = (precioSinDescuento * 0.9);}
+
+                else{document.getElementById("txtIdprecioDescuento").value = (precioSinDescuento * 0.95);}
+
+                break;
+
+        case 2:
+        case 1: document.getElementById("txtIdprecioDescuento").value = precioSinDescuento;
+
+                break;
+
+        default:if(precioSinDescuento * 0.5 >= 120){
+                    document.getElementById("txtIdprecioDescuento").value = (precioSinDescuento * 0.5) * 1.1; ;
+                    alert("usted pago " + (precioSinDescuento * 0.5)* 0.1 + " de IIBB");}
+
+                else if (precioSinDescuento * 0.5 <= 120){
+                    document.getElementById("txtIdprecioDescuento").value = precioSinDescuento * 0.5;}
+
+        }
+    }
+
+    /* Martin Allende
+      Tp 4 Correccion 
+      Allende, sigue estando mal lo que mandaste las cuentas son al final de la logica del switch y del if */
     
-    else if(cantidadDeLamparas == 4 && marca != "ArgentinaLuz" && marca != "FelipeLamparas"){{switch(precioSinDescuento * 0.8 >= 120){
-        case true:(document.getElementById("txtIdprecioDescuento").value) = (precioSinDescuento * 0.8)* 1.1
-        alert("usted pago " + (precioSinDescuento * 0.8)* 0.1 + " de IIBB");
-        break;
-        case false:(document.getElementById("txtIdprecioDescuento").value) = precioSinDescuento * 0.8
-        break;}
-                                                          }};
-
-    /* D */
-
-    if(cantidadDeLamparas == 3 && marca == "ArgentinaLuz"){{switch(precioSinDescuento * 0.85 >= 120){
-        case true:(document.getElementById("txtIdprecioDescuento").value) = (precioSinDescuento * 0.85)* 1.1
-        alert("usted pago " + (precioSinDescuento * 0.85)* 0.1 + " de IIBB");
-        break;
-        case false:(document.getElementById("txtIdprecioDescuento").value) = precioSinDescuento * 0.85
-        break;}
-                                                          }}
-
-    else if(cantidadDeLamparas == 3 && marca == "FelipeLamparas"){{switch(precioSinDescuento * 0.9 >= 120){
-        case true:(document.getElementById("txtIdprecioDescuento").value) = (precioSinDescuento * 0.9)* 1.1
-        alert("usted pago " + (precioSinDescuento * 0.9)* 0.1 + " de IIBB");
-        break;
-        case false:(document.getElementById("txtIdprecioDescuento").value) = precioSinDescuento * 0.9
-        break;}
-                                                          }}
-
-    else if(cantidadDeLamparas == 3 && marca != "FelipeLamparas" && marca != "ArgentinaLuz"){{switch(precioSinDescuento * 0.95 >= 120){
-        case true:(document.getElementById("txtIdprecioDescuento").value) = (precioSinDescuento * 0.95)* 1.1
-        alert("usted pago " + (precioSinDescuento * 0.95)* 0.1 + " de IIBB");
-        break;
-        case false:(document.getElementById("txtIdprecioDescuento").value) = precioSinDescuento * 0.95
-        break;}
-                                                          }};
-    /* Menos de 3 */                                                      
-
-    if(cantidadDeLamparas <= 2){
-        (document.getElementById("txtIdprecioDescuento").value) = precioSinDescuento};
-
-   
+                                
+ 
+    
 
 
-}

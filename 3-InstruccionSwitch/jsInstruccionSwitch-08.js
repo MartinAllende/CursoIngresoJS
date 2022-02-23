@@ -1,5 +1,5 @@
 function mostrar()
-{
+/*{
 	let destino;
 	
 	destino = document.getElementById("txtIdDestino").value;
@@ -16,6 +16,20 @@ function mostrar()
 	}
 			
 	
-}
+}*/
+
+{
+	let destino;
+	let mensaje;
+	
+	destino = document.getElementById("txtIdDestino").value;
+
+	if( destino == "Bariloche" || destino == "Ushuaia"){
+		mensaje = "Hace frio";}
+	else{mensaje = "Hace calor";}
+
+	alert(mensaje);
+} //entregado
 	/* Martin Allende
-		Switch 8 */
+		Switch 8 
+		entregado */

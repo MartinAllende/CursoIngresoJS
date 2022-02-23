@@ -1,18 +1,19 @@
-/*
-Al presionar el botón pedir  números  hasta que el USUARIO QUIERA 
-e informar la suma acumulada y el promedio.
-*/
 function mostrar()
 {
-	var contador;
-	var acumulador;
-	var respuesta;
-	contador=0;
-	acumulador=0;
-	respuesta='si';
+	
+	let cont = 0;
+	let acum = 0;
+	let numero = 0;
+	let respuesta ;
 
+	
+	while(respuesta != "No"){
+		cont = cont + 1;
+		acum = acum + numero;
+		numero = parseInt(prompt("ingrese numero " + cont ));
+		respuesta = prompt("¿Quiere seguir?, responda con Si o No")
+	}
+		document.getElementById("txtIdSuma").value = acum;
+		document.getElementById("txtIdPromedio").value = acum/cont;
 
-	txtIdSuma.value=acumulador;
-	txtIdPromedio.value=acumulador/contador;
-
-}//FIN DE LA FUNCIÓN
+}	/*entregado*/

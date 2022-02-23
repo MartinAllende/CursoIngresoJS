@@ -24,4 +24,5 @@ function mostrar()
 
 }
 	/* Martin Allende
-		Switch 7 */
+		Switch 7 
+		entregar */
