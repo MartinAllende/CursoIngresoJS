@@ -113,15 +113,96 @@ function mostrar()
 
 }*/
 
-{
+/*{
+	let numero;
+	let maxNegativos;
+	let minPares;
+	let maximo;
+	let minimo;
+	let decicion = "si";
+	let flag = 1;
+	let flagPares = 1;
+	let flagNegativos = 1;
 
+	while(decicion == "si")
+	{
+		numero = parseInt(prompt("Ingrese un numero"));
 
+		while(isNaN(numero) == true)
+		{
 
+			numero = parseInt(prompt("Esto no es valido, Por favor ingrese un numero"));
 
+		}
 
+		if(numero > maximo || flag == 1)
+		{
 
+			maximo = numero;
 
+		}
 
+		if(numero < minimo || flag == 1)
+		{
 
-}
+			minimo = numero;
+
+		}
+
+		if(numero % 2 == 0 && (numero < minPares || flagPares == 1))
+		{
+
+			minPares = numero;
+
+			flagPares = 0;
+
+		}
+
+		if(numero < 0 && (numero > maxNegativos || flagNegativos == 1))
+		{
+
+			maxNegativos = numero;
+
+			flagNegativos = 0;
+
+		}
+
+		
+		flag = 0;
+	
+		decicion = prompt("Quiere ingresar otro numero? si/no");
+
+	}
+
+	console.log("Numero maximo: " + maximo);
+
+	console.log("Numero minimo: " + minimo);
+
+	if(flagPares == 0)
+	{
+
+		console.log("Menor de los pares: " + minPares);
+
+	}
+
+	else if (flagPares == 1)
+	{
+
+		console.log("No ingresaste ningun numero par");
+
+	}
+	if(flagNegativos == 0)
+	{
+
+	console.log("Mayor de los negativos: " + maxNegativos);
+
+	}
+	else if(flagNegativos == 1)
+	{
+
+		console.log("No ingresaste ningun numero negativo");
+
+	}
+
+}*/
 
